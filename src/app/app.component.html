@@ -1,0 +1,29 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+<br>
+<br>
+Nama:
+<input [(ngModel)]=nama>
+
+<br>
+<br>
+Penjelasan:
+<input [(ngModel)]=penjelasan>
+<br>
+<button (click)="input()">Input</button>
+<br>
+<button (click)="show()">show</button>
+<br>
+<br>
+
+<button (click)="showpage()">Show Page</button>
+&nbsp;
+<button (click)="editpage()">Edit Page</button>
+
+
+
+
+
+<router-outlet></router-outlet>
