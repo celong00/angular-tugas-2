@@ -10,10 +10,13 @@ export class ShowpageComponent implements OnInit {
   constructor(private route : ActivatedRoute) { }
 
 
-  semua="";
+  penjelasan='';
+  semua=[];
   ngOnInit() {
-    let id= this.route.snapshot.paramMap.get('id');
-    this.semua=id;
+    let nama= this.route.snapshot.paramMap.get('id');
+     let penjelasan= this.route.snapshot.paramMap.get('new');
+    this.semua.push(nama);
+    this.semua.push(penjelasan);
   }
 
 }

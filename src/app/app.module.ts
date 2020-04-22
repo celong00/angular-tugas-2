@@ -12,7 +12,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 const ROUTES:Routes=[
   { path:'showpage', component : ShowpageComponent},
-     { path:'editpage', component : EditpageComponent}
+     { path:'editpage', component : EditpageComponent},
+     { path:'showpage/:id:new', component : ShowpageComponent}
+     
 ]
 
 @NgModule({

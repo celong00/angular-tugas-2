@@ -16,7 +16,7 @@ export class AppComponent  {
 
   }
   showpage(){
-    this.router.navigate(['/showpage']);
+    this.router.navigate(['/showpage',this.nama,this.penjelasan]);
   }
   editpage(){
     this.router.navigate(['/editpage'])
