@@ -8,6 +8,7 @@ import { HelloComponent } from './hello.component';
 import { ShowpageComponent } from './showpage/showpage.component';
 import { EditpageComponent } from './editpage/editpage.component';
 import { Routes, RouterModule } from '@angular/router';
+import { GlobSerService } from './glob-ser.service';
 
 
 const ROUTES:Routes=[
@@ -20,6 +21,7 @@ const ROUTES:Routes=[
 @NgModule({
   imports:      [ BrowserModule, FormsModule,RouterModule.forRoot(ROUTES) ],
   declarations: [ AppComponent, HelloComponent,ShowpageComponent, EditpageComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers: [GlobSerService]
 })
 export class AppModule { }

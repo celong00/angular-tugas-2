@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { GlobSerService } from '../glob-ser.service'
 @Component({
   selector: 'app-showpage',
   templateUrl: './showpage.component.html',
@@ -7,8 +8,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class ShowpageComponent implements OnInit {
-
-  constructor(private route : ActivatedRoute) { }
+  datadariglob:any;
+  datahtml:String;
+  datatemp:any;
+  constructor(private route : ActivatedRoute,public variabelglobal:GlobSerService){
+     this.datadariglob=this.variabelglobal.getData(this.datadariglob);
+    this.datatemp=this.datadariglob;
+    console.log(this.datadariglob);
+  }
   penjelasan='';
   semua=[];
   total=[];
@@ -17,18 +24,7 @@ export class ShowpageComponent implements OnInit {
 
 
   ngOnInit() {
-    let id= this.route.snapshot.paramMap.get('id');
-    if(id=='0'){
-      let namajur=this.route.snapshot.paramMap.get('nama');
-      let penjelasan= this.route.snapshot.paramMap.get('penjelasan');
-      this.semua.push(namajur);
-      this.semua.push(penjelasan);
-      this.cek=this.semua.length;
-      this.hiya+=this.hiya;
-    }
-    else{
-      this.total=this.semua;
-    }
+    
   }
 
 }
